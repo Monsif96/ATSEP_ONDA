@@ -292,6 +292,7 @@
         </div>
       </div>
       <!-- partial -->
+
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
@@ -301,21 +302,74 @@
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="Rn.html">
-              <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Radio Navigation</span>
+            <a class="nav-link" data-toggle="collapse" href="#ui-bas" aria-expanded="false" aria-controls="ui-bas">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">Maintenance</span>
+              <i class="menu-arrow"></i>
             </a>
+            <div class="collapse" id="ui-bas">
+              <ul class="nav flex-column sub-menu pl-4">
+                <li class="nav-item"> <a class="nav-link" href="MRn.html">Radio Navigation</a></li>
+                <li class="nav-item"> <a class="nav-link" href="MRc.html">Radar et CIR</a></li>
+              </ul>
+            </div>
           </li>
+
           <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basi" aria-expanded="false" aria-controls="ui-basi">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">Equipements</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basi">
+              <ul class="nav flex-column sub-menu pl-4">
+                <li class="nav-item"> <a class="nav-link" href="pages/ERn.html">Radio Nav</a>
+                  <div class="collapse" id="ui-basi">
+                  <ul class="nav flex-column sub-menu pl-4">
+                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">ILS/DME ATT</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">VOR/DME ROUTE</a></li>
+                  </ul>
+                  </div>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ERc.html">Radar</a>
+                  <div class="collapse" id="ui-basi">
+                  <ul class="nav flex-column sub-menu pl-4">
+                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">AIRCON 2100</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">ADS-B</a></li>
+                  </ul>
+                  </div>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ETwr.html">TWR</a>
+                  <div class="collapse" id="ui-basi">
+                  <ul class="nav flex-column sub-menu pl-4">
+                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">VHF</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">VCS</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">ENREGISTREUR</a></li>
+                  </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="icon-layout menu-icon"></i>
               <span class="menu-title">UI Elements</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
+              <ul class="nav flex-column sub-menu pl-4">
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
+                  <div class="collapse" id="ui-basic">
+                  <ul class="nav flex-column sub-menu pl-4">
+                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                  </ul>
+                  </div>
+                </li>
                 <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
               </ul>
@@ -394,7 +448,9 @@
                 <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
               </ul>
             </div>
-          </li>
+          </li> -->
+
+
           <li class="nav-item">
             <a class="nav-link" href="pages/documentation/documentation.html">
               <i class="icon-paper menu-icon"></i>
@@ -403,6 +459,8 @@
           </li>
         </ul>
       </nav>
+
+
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
