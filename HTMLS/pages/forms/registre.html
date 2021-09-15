@@ -488,13 +488,13 @@
 
                                   <div class="form-check mb-2 mr-sm-3">
                                     <label class="form-check-label">
-                                      <input type="checkbox" class="form-check-input">
+                                      <input type="checkbox" id="myRc" class="form-check-input" onclick="RC()">
                                       RC
                                     </label>
                                   </div>
                                   <div class="form-check mb-2 mr-sm-3">
                                     <label class="form-check-label">
-                                      <input type="checkbox" class="form-check-input">
+                                      <input type="checkbox" class="form-check-input" onclick="RN()">
                                       RN
                                     </label>
                                   </div>
@@ -559,7 +559,7 @@
                                 <td class="font-weight-bold">RN</td>
                                 <td >LOC</td>                     
                                 <td >19/08/2021</td>
-                                <td >officia deserunt mollit anim id est laborum.</td>
+                                <td >Un texte est une série orale ou écrite de mots perçus comme.</td>
                               </tr>
                                
                   
@@ -617,22 +617,43 @@
   <!-- End custom js for this page-->
   <script>
     function myFunction() {
-      var input, filter, table, tr, td, i, txtValue;
+      var input, filter;
       input = document.getElementById("myInput");
       filter = input.value.toUpperCase();
+      Filter(filter, 3);
+    }
+  </script>
+  <script>
+    function RC() {
+
+      var checkBox = document.getElementById("myRc");
+
+      if (checkBox.checked == true) {
+        input = "RC";
+        Filter(input, 0);
+      }else {
+        input = "";
+        Filter(input, 0);
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    function Filter(input, y) {
+      var table, tr, td, i, txtValue;
       table = document.getElementById("myTable");
       tr = table.getElementsByTagName("tr");
       for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[2];
-        if (td) {
-          txtValue = td.textContent || td.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-          } else {
-            tr[i].style.display = "none";
-          }
-        }       
-      }
+          td = tr[i].getElementsByTagName("td")[y];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(input) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }       
+        }
+
     }
   </script>
 </body>
