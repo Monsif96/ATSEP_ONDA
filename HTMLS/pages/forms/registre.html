@@ -488,13 +488,13 @@
 
                                   <div class="form-check mb-2 mr-sm-3">
                                     <label class="form-check-label">
-                                      <input type="checkbox" id="myRc" class="form-check-input" onclick="RC()">
+                                      <input type="checkbox" id="myRc" class="form-check-input" onclick="R()">
                                       RC
                                     </label>
                                   </div>
                                   <div class="form-check mb-2 mr-sm-3">
                                     <label class="form-check-label">
-                                      <input type="checkbox" class="form-check-input" onclick="RN()">
+                                      <input type="checkbox" id="myRn" class="form-check-input" onclick="R()">
                                       RN
                                     </label>
                                   </div>
@@ -543,7 +543,7 @@
                               </tr>  
                             </thead>
                             <tbody>
-                              <tr>
+                              <!-- <tr>
                                 <td class="font-weight-bold">RC</td>
                                 <td >Aircon</td>                     
                                 <td >12/07/2021</td>
@@ -560,7 +560,7 @@
                                 <td >LOC</td>                     
                                 <td >19/08/2021</td>
                                 <td >Un texte est une série orale ou écrite de mots perçus comme.</td>
-                              </tr>
+                              </tr> -->
                                
                   
                             </tbody>
@@ -615,26 +615,41 @@
   <script src="../../js/typeahead.js"></script>
   <script src="../../js/select2.js"></script>
   <!-- End custom js for this page-->
+  
+  <script>
+    function R() {
+
+      
+      var checkBox1 = document.getElementById("myRc");
+      var checkBox2 = document.getElementById("myRn");
+      console.log("0 "+ checkBox1.checked+checkBox2.checked);
+
+      if (checkBox1.checked == true && checkBox2.checked == true){
+        console.log("1 "+checkBox1.checked+checkBox2.checked);
+        input = "RNC";
+        Filter(input, 0);
+      }
+      if (checkBox1.checked == true && checkBox2.checked == false) {
+        console.log("2 "+checkBox1.checked+checkBox2.checked);
+        input = "RC";
+        Filter(input, 0);
+      }if (checkBox1.checked == false && checkBox2.checked == true) {
+        console.log("3 "+checkBox1.checked+checkBox2.checked);
+        input = "RN";
+        Filter(input, 0); 
+      }else {
+        console.log("1 "+checkBox1.checked+checkBox2.checked);
+        input = "";
+        Filter(input, 0);
+      }
+    }
+  </script>
   <script>
     function myFunction() {
       var input, filter;
       input = document.getElementById("myInput");
       filter = input.value.toUpperCase();
       Filter(filter, 3);
-    }
-  </script>
-  <script>
-    function RC() {
-
-      var checkBox = document.getElementById("myRc");
-
-      if (checkBox.checked == true) {
-        input = "RC";
-        Filter(input, 0);
-      }else {
-        input = "";
-        Filter(input, 0);
-      }
     }
   </script>
   <script type="text/javascript">
@@ -655,6 +670,42 @@
         }
 
     }
+  </script>
+
+  <script type="text/javascript">
+
+    fetch('http://localhost:3002/registre', {
+            method: 'get',
+            headers: {'Content-Type': 'application/json'}
+        })
+    .then(response => response.json())
+    .then(users => {
+          console.log(users);
+          
+          console.log(users.length);
+          for(var a = 0; a < users.length; a++) {
+            var Ent = users[a].entite;
+            var equi = users[a].equipement;
+            var date = users[a].Date;
+            var pan = users[a].panne;
+            //console.log(Ent, users.length);
+
+            var table = document.getElementById('myTable');
+            var row = table.insertRow(a+1);
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = Ent;
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML = equi;
+            var cell3 = row.insertCell(2);
+            cell3.innerHTML = date;
+            var cell4 = row.insertCell(3);
+            cell4.innerHTML = pan;
+
+          }
+
+        })
+
+    
   </script>
 </body>
 
