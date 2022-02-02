@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>ATSEP AGA - Form</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="../template/vendors/codemirror/codemirror.css">
+  <link rel="stylesheet" href="../template/vendors/codemirror/ambiance.css">
+  <link rel="stylesheet" href="../template/vendors/pwstabs/jquery.pwstabs.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../../images/favicon.png" />
+</head>
+
+<body>
+    <div class=" container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+          <div class="main-panel w-100  documentation">
+            <div class="content-wrapper">
+              <div class="container-fluid">
+                
+                <div class="card mt-3">
+                  <div class="card-body">
+                    <h4 class="card-title">Intervention</h4>
+                    <form class="form-sample">
+                      <p class="card-description">
+                        Merci de renseigner les détails de votre intervention.
+                      </p>
+                      
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Entité :</label>
+                            <div class="col-sm-3">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input  class="checkbox" id="addRC" value="RC" type="checkbox">
+                                  RC
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-sm-3">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="checkbox" id="addRN" value="RN" type="checkbox">
+                                  RN
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Equipement :</label>
+                            <div class="col-sm-7">
+                              <select class="form-control w-100" id="equi">
+                                <option value="ILS">ILS</option>
+                                <option value="DME ATT">DME ATT</option>
+                                <option value="VOR">VOR</option>
+                                <option value="DME R">DME R</option>
+                                <option value="NDB">NDB</option>
+                                <option value="VHF">VHF</option>
+                                <option value="VCS">VCS</option>
+                                <option value="D-ATIS">D-ATIS</option>
+                                <option value="ENREGISTREUR">ENREGISTREUR</option>
+                                <option value="ADS-B">ADS-B</option>
+                                <option value="AIRCON 2100">AIRCON 2100</option>
+                                <option value="EQUIPEMENT CIR">EQUIPEMENT CIR</option>
+                                <option value="" disabled selected hidden>Equipement</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Date :</label>
+                            <div class="col-sm-9">
+                              <input class="form-control" id="date" placeholder="dd/mm/yyyy"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Titre :</label>
+                            <div class="col-sm-9">
+                              <input class="form-control" id="titre" placeholder="Titre significatif"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleTextarea1">Remarques :</label>
+                        <textarea class="form-control" id="remarque" rows="4"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <a href="./registre.html">
+                          <button type="button" onclick="S()" class="btn btn-primary mr-2">Submit</button>
+                        </a>
+                        <a href="./registre.html">
+                          <button type="button" class="btn btn-secondary mr-2">Cancel</button>
+                        </a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+
+            <!-- partial:../../partials/_footer.html -->
+            <footer class="footer">
+              <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>
+              </div>
+            </footer>
+            <!-- partial -->
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+<!-- plugins:js -->
+<script src="../../vendors/js/vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- inject:js -->
+<script src="../../js/off-canvas.js"></script>
+<script src="../../js/hoverable-collapse.js"></script>
+<script src="../../js/template.js"></script>
+<script src="../../js/settings.js"></script>
+<script src="../../js/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="../../js/codeEditor.js"></script>
+<script src="../../js/tabs.js"></script>
+<script src="../../js/tooltips.js"></script>
+<script src="../../js/documentation.js"></script>
+<!-- End custom js for this page-->
+
+<script>
+  function S() {
+    var entite, equi, date, titre, remarque;
+    equi = document.getElementById("equi").value;
+    date = document.getElementById("date").value;
+    titre = document.getElementById("titre").value;
+    remarque = document.getElementById("remarque").value;
+    console.log(equi, date, titre, remarque);
+    var checkBox1 = document.getElementById("addRC");
+    var checkBox2 = document.getElementById("addRN");
+    
+    if (checkBox1.checked == true ) {
+      console.log("rc :"+checkBox1.checked+checkBox2.checked);
+      entite = "RC";
+      
+    }else {
+      console.log("rn : "+checkBox1.checked+checkBox2.checked);
+      entite = "RN";
+      
+    }
+
+    fetch('http://192.168.1.105:3002/add', {
+            method: 'post',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                ent: entite,
+                equi: equi,
+                date: date,
+                titre: titre,
+                remarque: remarque             
+            })
+    })
+    .then(response => response.json())
+    .then(panne=> {
+          console.log(panne[0], "000");
+          
+    })
+    //window.location.replace = "form.html";
+
+  }
+</script>
+
+<script type="text/javascript">
+  var x = parent.document.URL.substring(parent.document.URL.indexOf('?'), parent.document.URL.length);
+  //console.log("Voici : ", x.slice(4));
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,671 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>ATSEP AGA - Rapport Journalier</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="../template/vendors/codemirror/codemirror.css">
+  <link rel="stylesheet" href="../template/vendors/codemirror/ambiance.css">
+  <link rel="stylesheet" href="../template/vendors/pwstabs/jquery.pwstabs.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../../images/favicon.png" />
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+<body>
+    <div class=" container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+          <div class="main-panel w-100  documentation">
+            <div class="content-wrapper">
+              <div class="container-fluid">
+                <div class="row">
+
+                  <div class="col-12 grid-margin stretch-card">
+                  <div class="card mt-3">
+                    <div class="card-body">
+                      <h4 class="card-title">Rapport Journalier</h4>
+                        <p class="card-description">
+                          Merci de renseigner les détails de votre vaccation.
+                        </p>
+                        <!-- la Date ------------------------------------------->
+                        <div class="col-md-12">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Date :</label>
+                            <div class="col-sm-7">
+                              <input class="form-control form-control-sm" id="date" placeholder="dd/mm/yyyy"/>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  </div>
+                  <!-- Vaccation 1 --------------------------------------->
+                  <div class="col-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="row mt-3 ml-2 mr-2">
+                        <!-- <h4 class="card-title">Rapport Journalier</h4>
+                          <p class="card-description">
+                            Merci de renseigner les détails de votre vaccation.
+                          </p> -->
+                          <div class="col-md-4">
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label ml-2">Equipe :</label>
+                              <div class="col-sm-7">
+                                <select class="form-control form-control-sm" id="equi1">
+                                  <option value="A">A</option>
+                                  <option value="B">B</option>
+                                  <option value="C">C</option>
+                                  <option value="D">D</option>
+                                  <option value="" disabled selected hidden>Equipe</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group row">
+                              <label class="col-sm-5 col-form-label">Vacation :</label>
+                              <div class="col-sm-7">
+                                <select class="form-control form-control-sm" id="vac1">
+                                  <option value="14H00/21H00">14H00/21H00</option>
+                                  <option value="21H00/08H00">21H00/08H00</option>
+                                  <option value="08H00/14H00">08H00/14H00</option>
+                                  <option value="" disabled selected hidden>14H00/21H00</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group row">
+                              <label class="col-sm-3 col-form-label"></label>
+                              <div class="col-sm-7">
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-inverse-primary">ATSEP</button>
+                                  <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" id="dropdownMenuSplitButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                  </button>  
+                                    <ul class="dropdown-menu" onclick="Vac1()">
+                                      <li><a class="dropdown-item" ><input id="1" value="AIT BAAZIZ" type="checkbox"/>&nbsp;AIT BAAZIZ</a></li>
+                                      <li><a class="dropdown-item" ><input id="2" value="ELGHAZAOUI" type="checkbox"/>&nbsp;ELGHAZAOUI</a></li>
+                                      <li><a class="dropdown-item" ><input id="3" value="BELGHARD" type="checkbox"/>&nbsp;BELGHARD</a></li>
+                                      <li><a class="dropdown-item" ><input id="4" value="AKHARTOUNE" type="checkbox"/>&nbsp;AKHARTOUNE</a></li>
+                                      <li><a class="dropdown-item" ><input id="5" value="NAMIQ" type="checkbox"/>&nbsp;NAMIQ</a></li>
+                                      <li><a class="dropdown-item" ><input id="6" value="BELAGUID" type="checkbox"/>&nbsp;BELAGUID</a></li>
+                                      <li><a class="dropdown-item" ><input id="7" value="AZEM" type="checkbox"/>&nbsp;AZEM</a></li>
+                                      <li><a class="dropdown-item" ><input id="8" value="AGUNI" type="checkbox"/>&nbsp;AGUNI</a></li>
+                                      <li><a class="dropdown-item" ><input id="9" value="OUASSOU" type="checkbox"/>&nbsp;OUASSOU</a></li>
+                                      <li><a class="dropdown-item" ><input id="10" value="EL KHOLTI" type="checkbox"/>&nbsp;EL KHOLTI</a></li>
+                                    </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <label for="exampleTextarea1">Descriptifs :</label>
+                          </div>
+                          <div class="col-md-7 justify-content-center">
+                            <div class="form-group">
+                              <textarea class="form-control " id="desc1" rows="8" cols="100"></textarea>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                  </div>
+
+                  <!-- Vaccation 2 --------------------------------------->
+                  <div class="col-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="row mt-3 ml-2 mr-2">
+                        <!-- <h4 class="card-title">Rapport Journalier</h4>
+                          <p class="card-description">
+                            Merci de renseigner les détails de votre vaccation.
+                          </p> -->
+                          <div class="col-md-4">
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label ml-2">Equipe :</label>
+                              <div class="col-sm-7">
+                                <select class="form-control form-control-sm" id="equi2">
+                                  <option value="A">A</option>
+                                  <option value="B">B</option>
+                                  <option value="C">C</option>
+                                  <option value="D">D</option>
+                                  <option value="" disabled selected hidden>Equipe</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group row">
+                              <label class="col-sm-5 col-form-label">Vacation :</label>
+                              <div class="col-sm-7">
+                                <select class="form-control form-control-sm" id="vac2">
+                                  <option value="14H00/21H00">14H00/21H00</option>
+                                  <option value="21H00/08H00">21H00/08H00</option>
+                                  <option value="08H00/14H00">08H00/14H00</option>
+                                  <option value="" disabled selected hidden>14H00/21H00</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group row">
+                              <label class="col-sm-3 col-form-label"></label>
+                              <div class="col-sm-7">
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-inverse-primary">ATSEP</button>
+                                  <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" id="dropdownMenuSplitButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                  </button>  
+                                    <ul class="dropdown-menu" onclick="Vac2()">
+                                      <li><a class="dropdown-item" ><input id="11" value="AIT BAAZIZ" type="checkbox"/>&nbsp;AIT BAAZIZ</a></li>
+                                      <li><a class="dropdown-item" ><input id="12" value="ELGHAZAOUI" type="checkbox"/>&nbsp;ELGHAZAOUI</a></li>
+                                      <li><a class="dropdown-item" ><input id="13" value="BELGHARD" type="checkbox"/>&nbsp;BELGHARD</a></li>
+                                      <li><a class="dropdown-item" ><input id="14" value="AKHARTOUNE" type="checkbox"/>&nbsp;AKHARTOUNE</a></li>
+                                      <li><a class="dropdown-item" ><input id="15" value="NAMIQ" type="checkbox"/>&nbsp;NAMIQ</a></li>
+                                      <li><a class="dropdown-item" ><input id="16" value="BELAGUID" type="checkbox"/>&nbsp;BELAGUID</a></li>
+                                      <li><a class="dropdown-item" ><input id="17" value="AZEM" type="checkbox"/>&nbsp;AZEM</a></li>
+                                      <li><a class="dropdown-item" ><input id="18" value="AGUNI" type="checkbox"/>&nbsp;AGUNI</a></li>
+                                      <li><a class="dropdown-item" ><input id="19" value="OUASSOU" type="checkbox"/>&nbsp;OUASSOU</a></li>
+                                      <li><a class="dropdown-item" ><input id="20" value="EL KHOLTI" type="checkbox"/>&nbsp;EL KHOLTI</a></li>
+                                    </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 ml-2">
+                            <label for="exampleTextarea1">Descriptifs :</label>
+                          </div>
+                          <div class="col-md-7 justify-content-center">
+                            <div class="form-group">
+                              <textarea class="form-control " id="desc2" rows="8" cols="100"></textarea>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                  </div>
+
+                  <!-- Vaccation 3 --------------------------------------->
+                  <div class="col-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="row mt-3 ml-2 mr-2">
+                      
+                        <!-- <h4 class="card-title">Rapport Journalier</h4>
+                          <p class="card-description">
+                            Merci de renseigner les détails de votre vaccation.
+                          </p> -->
+                          <div class="col-md-4">
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-form-label ml-2">Equipe :</label>
+                              <div class="col-sm-7">
+                                <select class="form-control form-control-sm" id="equi3">
+                                  <option value="A">A</option>
+                                  <option value="B">B</option>
+                                  <option value="C">C</option>
+                                  <option value="D">D</option>
+                                  <option value="" disabled selected hidden>Equipe</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group row">
+                              <label class="col-sm-5 col-form-label">Vacation :</label>
+                              <div class="col-sm-7">
+                                <select class="form-control form-control-sm" id="vac3">
+                                  <option value="14H00/21H00">14H00/21H00</option>
+                                  <option value="21H00/08H00">21H00/08H00</option>
+                                  <option value="08H00/14H00">08H00/14H00</option>
+                                  <option value="" disabled selected hidden>14H00/21H00</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group row">
+                              <label class="col-sm-3 col-form-label"></label>
+                              <div class="col-sm-7">
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-inverse-primary">ATSEP</button>
+                                  <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" id="dropdownMenuSplitButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                  </button>  
+                                    <ul class="dropdown-menu" onclick="Vac3()">
+                                      <li><a class="dropdown-item" ><input id="21" value="AIT BAAZIZ" type="checkbox"/>&nbsp;AIT BAAZIZ</a></li>
+                                      <li><a class="dropdown-item" ><input id="22" value="ELGHAZAOUI" type="checkbox"/>&nbsp;ELGHAZAOUI</a></li>
+                                      <li><a class="dropdown-item" ><input id="23" value="BELGHARD" type="checkbox"/>&nbsp;BELGHARD</a></li>
+                                      <li><a class="dropdown-item" ><input id="24" value="AKHARTOUNE" type="checkbox"/>&nbsp;AKHARTOUNE</a></li>
+                                      <li><a class="dropdown-item" ><input id="25" value="NAMIQ" type="checkbox"/>&nbsp;NAMIQ</a></li>
+                                      <li><a class="dropdown-item" ><input id="26" value="BELAGUID" type="checkbox"/>&nbsp;BELAGUID</a></li>
+                                      <li><a class="dropdown-item" ><input id="27" value="AZEM" type="checkbox"/>&nbsp;AZEM</a></li>
+                                      <li><a class="dropdown-item" ><input id="28" value="AGUNI" type="checkbox"/>&nbsp;AGUNI</a></li>
+                                      <li><a class="dropdown-item" ><input id="29" value="OUASSOU" type="checkbox"/>&nbsp;OUASSOU</a></li>
+                                      <li><a class="dropdown-item" ><input id="30" value="EL KHOLTI" type="checkbox"/>&nbsp;EL KHOLTI</a></li>
+                                    </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 ml-2">
+                            <label for="exampleTextarea1">Descriptifs :</label>
+                          </div>
+                          <div class="col-md-7 justify-content-center">
+                            <div class="form-group">
+                              <textarea class="form-control " id="desc3" rows="8" cols="100"></textarea>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                  </div>
+
+                  <!-- Submit & Generate PDF --------------------------------------->
+                  <div class="col-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="row mt-3 ml-2 mr-2">
+                      <div class="col-md-12">
+                        <div class="form-group row text-center">
+                          <div class="col-md-12 col-md-offset-12">
+                            
+                            <a>
+                              <button type="button" onclick="GeneratePdf()" class="btn btn-primary mr-2 mt-2">Generate PDF</button>
+                            </a>
+                            <a>
+                              <button type="button" onclick="SendMail()" class="btn btn-primary mr-2 mt-2">Submit</button>
+                            </a>
+                            <a href="../../index.html">
+                              <button type="button" class="btn btn-secondary mr-2 mt-2">Cancel</button>
+                            </a>
+                           
+                          </div>
+                          
+                        </div>
+                      </div> 
+                    </div>
+                  </div>
+                  </div>
+                
+              </div>
+            </div>
+
+            <!-- partial:../../partials/_footer.html -->
+            <footer class="footer">
+              <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © GMAD ATSEP 2022. All rights reserved.</span>
+                
+              </div>
+            </footer>
+            <!-- partial -->
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+<!-- plugins:js  hiadmlqihmgvwcrz  -->
+<script src="../../vendors/js/vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- inject:js -->
+<script src="../../js/off-canvas.js"></script>
+<script src="../../js/hoverable-collapse.js"></script>
+<script src="../../js/template.js"></script>
+<script src="../../js/settings.js"></script>
+<script src="../../js/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="../../js/codeEditor.js"></script>
+<script src="../../js/tabs.js"></script>
+<script src="../../js/tooltips.js"></script>
+<!-- <script src="../../js/documentation.js"></script> -->
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.js"></script>
+<script src="https://unpkg.com/downloadjs@1.4.7"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.min.js"></script>
+<!-- <script data-main="scripts/app" src="scripts/require.js"></script> -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Base64/1.1.0/base64.min.js"></script>
+
+<!-- End custom js for this page-->
+
+<script type="text/javascript">
+  const { PDFDocument } = PDFLib;
+  async function GeneratePdf() {
+    
+    var date = document.getElementById("date").value;
+    
+    var equi1 = document.getElementById("equi1").value;
+    var Vac1 = document.getElementById("vac1").value;
+    var Desc1 = document.getElementById("desc1").value;
+
+    var equi2 = document.getElementById("equi2").value;
+    var Vac2 = document.getElementById("vac2").value;
+    var Desc2 = document.getElementById("desc2").value;
+
+    var equi3 = document.getElementById("equi3").value;
+    var Vac3 = document.getElementById("vac3").value;
+    var Desc3 = document.getElementById("desc3").value;
+
+    //console.log(date, equi1, Vac2, Desc3, window.data1);
+
+    // Get ATSEP Equipe -----------------------------------------------
+    d1 = window.data1;
+    d2 = window.data2;
+    d3 = window.data3;
+
+    var r1 = [" "];
+    for (var i = 0; i < 11; i++) {
+      if (!(d1[i] === undefined)) {
+        //console.log(d1[i]);
+        r1 = r1 + d1[i] + " \n ";
+      } 
+    }
+    var r2 = [" "];
+    for (var i = 0; i < 11; i++) {
+      if (!(d2[i] === undefined)) {
+        //console.log(d2[i]);
+        r2 = r2 + d2[i] + " \n ";
+      } 
+    }
+    var r3 = [" "];
+    for (var i = 0; i < 11; i++) {
+      if (!(d3[i] === undefined)) {
+        //console.log(d3[i]);
+        r3 = r3 + d3[i] + " \n ";
+      } 
+    }
+    //console.log("this is data : ", r1, r2, r3);
+    // Fetch the PDF with form fields
+    const url = './RJ.pdf';
+    const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
+
+    // Load a PDF with form fields
+    const pdfDoc = await PDFDocument.load(existingPdfBytes)
+    
+    const form = pdfDoc.getForm()
+
+    // PAGE 1: Get all fields in the PDF by their names & Fill in the basic info fields
+    const dateField = form.getTextField('date')
+      dateField.setText(date)
+
+    // Vac 1 -----------------------------------------------
+    const equi1Field = form.getTextField('equi1')
+      equi1Field.setText(equi1)
+
+    const esa1Field = form.getTextField('esa1')
+      esa1Field.setText(r1)
+
+    const vac1Field = form.getTextField('vac1')
+      vac1Field.setText(Vac1)
+
+    const desc1Field = form.getTextField('desc1')
+      desc1Field.setText(Desc1)
+
+    // Vac 2 -----------------------------------------------
+    const equi2Field = form.getTextField('equi2')
+      equi2Field.setText(equi2)
+
+    const vac2Field = form.getTextField('vac2')
+      vac2Field.setText(Vac2)
+
+    const desc2Field = form.getTextField('desc2')
+      desc2Field.setText(Desc2)
+
+    const esa2Field = form.getTextField('esa2')
+      esa2Field.setText(r2)
+
+    // Vac 3 -----------------------------------------------
+    const equi3Field = form.getTextField('equi3')
+      equi3Field.setText(equi3)
+
+    const vac3Field = form.getTextField('vac3')
+      vac3Field.setText(Vac3)
+
+    const desc3Field = form.getTextField('desc3')
+      desc3Field.setText(Desc3)
+
+    const esa3Field = form.getTextField('esa3')
+      esa3Field.setText(r3)
+
+    const pdfBytes = await pdfDoc.save();
+    download(pdfBytes, `RJ.pdf`, "application/pdf");
+  }
+</script>
+
+<script type="text/javascript">
+  async function SendMail(){
+    
+    var date = document.getElementById("date").value;
+    var equi1 = document.getElementById("equi1").value;
+    var Vac1 = document.getElementById("vac1").value;
+    var Desc1 = document.getElementById("desc1").value;
+
+    var equi2 = document.getElementById("equi2").value;
+    var Vac2 = document.getElementById("vac2").value;
+    var Desc2 = document.getElementById("desc2").value;
+
+    var equi3 = document.getElementById("equi3").value;
+    var Vac3 = document.getElementById("vac3").value;
+    var Desc3 = document.getElementById("desc3").value;
+
+    //console.log(date, equi1, Vac2, Desc3, window.data1);
+
+    // Get ATSEP Equipe -----------------------------------------------
+    d1 = window.data1;
+    d2 = window.data2;
+    d3 = window.data3;
+
+    var r1 = [" "];
+    for (var i = 0; i < 11; i++) {
+      if (!(d1[i] === undefined)) {
+        //console.log(d1[i]);
+        r1 = r1 + d1[i] + " \n ";
+      } 
+    }
+    var r2 = [" "];
+    for (var i = 0; i < 11; i++) {
+      if (!(d2[i] === undefined)) {
+        //console.log(d2[i]);
+        r2 = r2 + d2[i] + " \n ";
+      } 
+    }
+    var r3 = [" "];
+    for (var i = 0; i < 11; i++) {
+      if (!(d3[i] === undefined)) {
+        //console.log(d3[i]);
+        r3 = r3 + d3[i] + " \n ";
+      } 
+    }
+
+    // Fetch the PDF with form fields
+    const url = './RJ.pdf';
+    const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
+
+    // Load a PDF with form fields
+    const pdfDoc = await PDFDocument.load(existingPdfBytes)
+    
+    const form = pdfDoc.getForm()
+
+    // PAGE 1: Get all fields in the PDF by their names & Fill in the basic info fields
+    const dateField = form.getTextField('date')
+      dateField.setText(date)
+
+    // Vac 1 -----------------------------------------------
+    const equi1Field = form.getTextField('equi1')
+      equi1Field.setText(equi1)
+
+    const esa1Field = form.getTextField('esa1')
+      esa1Field.setText(r1)
+
+    const vac1Field = form.getTextField('vac1')
+      vac1Field.setText(Vac1)
+
+    const desc1Field = form.getTextField('desc1')
+      desc1Field.setText(Desc1)
+
+    // Vac 2 -----------------------------------------------
+    const equi2Field = form.getTextField('equi2')
+      equi2Field.setText(equi2)
+
+    const vac2Field = form.getTextField('vac2')
+      vac2Field.setText(Vac2)
+
+    const desc2Field = form.getTextField('desc2')
+      desc2Field.setText(Desc2)
+
+    const esa2Field = form.getTextField('esa2')
+      esa2Field.setText(r2)
+
+    // Vac 3 -----------------------------------------------
+    const equi3Field = form.getTextField('equi3')
+      equi3Field.setText(equi3)
+
+    const vac3Field = form.getTextField('vac3')
+      vac3Field.setText(Vac3)
+
+    const desc3Field = form.getTextField('desc3')
+      desc3Field.setText(Desc3)
+
+    const esa3Field = form.getTextField('esa3')
+      esa3Field.setText(r3)
+
+    const pdfDataUri = await pdfDoc.saveAsBase64({ dataUri: true });
+    var base64 = pdfDataUri.slice(28)
+
+    GoogleMail(base64);
+  }
+</script>
+
+<script type="text/javascript">
+  function GoogleMail(file) {
+    var maillist = [
+          's.adnan@onda.ma',
+          'm.hammouani@onda.ma',
+          'k.aitbaaziz@onda.ma',
+          'm.elghazaoui@onda.ma',
+          'n.belghard@onda.ma',
+        ];
+    var date = document.getElementById("date").value;
+    Email.send({
+    
+      Host: "smtp.gmail.com",
+      Username : "agadiratsep@gmail.com",
+      Password : "hiadmlqihmgvwcrz",
+      To : maillist,
+      From : "agadiratsep@gmail.com",
+      Subject : "Rapport Journalier "+date,
+      Body : "Bonne Réception ",
+      Attachments : [
+        {
+          name : "Rapport Journalier.pdf",
+          data:  `${file}`
+        }
+      ]
+      }).then(
+          function(err, info) {
+            if (err) {
+              console.error(err);
+              Alert(err);
+            } else {
+              console.log(info);
+            }
+          }
+
+        );
+  }
+</script>
+
+<script type="text/javascript">
+  function Alert(err) {
+
+    console.log("Google Response is :", err);
+
+    const ok = "OK";
+    if (err === ok) {
+      alert(err);
+    }else{
+      alert("nnn");
+    }
+  }
+</script>
+
+<script type="text/javascript">
+  function Vac1() {
+
+    var state1 = {};
+    window.data1 = {};
+    var x = 1;
+
+    for (var i = x; i < x+10; i++) {
+      s = document.getElementById(i).checked;
+      state1[i] = s;
+    }
+    //console.log(state1);
+    
+    for (var i = 1; i < 11; i++) {
+      if (state1[i] == true) {
+        data1[i] = document.getElementById(i).value;
+      }
+    }
+    console.log("Vac 1 :",data1);
+  }
+</script>
+
+<script type="text/javascript">
+  function Vac2() {
+
+    var state2 = {};
+    window.data2 = {};
+    var y = 11;
+
+    for (var i = y; i < y+10; i++) {
+      ss = document.getElementById(i).checked;
+      state2[i-10] = ss;
+    }
+    //console.log(state2);
+  
+    for (var i = 1; i < 11; i++) {
+      if (state2[i] == true) {
+        data2[i] = document.getElementById(i).value;
+      }
+    }
+    //data2 = Data(state2, data2, y);
+    console.log("Vac 2 :",data2);  
+  }
+</script>
+
+<script type="text/javascript">
+  function Vac3() {
+
+    var state3 = {};
+    window.data3 = {};
+    var z = 21;
+
+    for (var i = z; i < z+10; i++) {
+      ss = document.getElementById(i).checked;
+      state3[i-20] = ss;
+    }
+    //console.log(state3);
+    
+    for (var i = 1; i < 11; i++) {
+      if (state3[i] == true) {
+        data3[i] = document.getElementById(i).value;
+      }
+    }
+    //data3 = Data(state3, data3, z);
+    console.log("Vac 3 :", data3);  
+  }
+</script>
+
+
+</body>
+
+</html>

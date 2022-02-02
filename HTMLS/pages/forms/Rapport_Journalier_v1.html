@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>ATSEP AGA - Form</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="../template/vendors/codemirror/codemirror.css">
+  <link rel="stylesheet" href="../template/vendors/codemirror/ambiance.css">
+  <link rel="stylesheet" href="../template/vendors/pwstabs/jquery.pwstabs.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../../images/favicon.png" />
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+<body>
+    <div class=" container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+          <div class="main-panel w-100  documentation">
+            <div class="content-wrapper">
+              <div class="container-fluid">
+                
+                <div class="card mt-3">
+                  <div class="card-body">
+                    <h4 class="card-title">Rapport Journalier</h4>
+                    <form class="form-sample">
+                      <p class="card-description">
+                        Merci de renseigner les détails de votre vaccation.
+                      </p>
+                      
+                      <div class="row">
+                        <!-- la Date ------------------------------------------->
+                        <div class="col-md-12">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Date :</label>
+                            <div class="col-sm-7">
+                              <input class="form-control form-control-sm" id="date" placeholder="dd/mm/yyyy"/>
+                            </div>
+                          </div>
+                        </div>
+              
+                        <!-- Vaccation 1 --------------------------------------->
+                        <div class="col-md-4">
+                          <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Equipe :</label>
+                            <div class="col-sm-7">
+                              <select class="form-control form-control-sm" id="equi">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                
+                                <option value="" disabled selected hidden>Equipe</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group row">
+                            <label class="col-sm-5 col-form-label">Vacation :</label>
+                            <div class="col-sm-7">
+                              <select class="form-control form-control-sm" id="vac">
+                                <option value="14H00/21H00">14H00/21H00</option>
+                                <option value="21H00/08H00">21H00/08H00</option>
+                                <option value="08H00/14H00">08H00/14H00</option>
+                                <option value="" disabled selected hidden>14H00/21H00</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-7">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-inverse-primary">ATSEP</button>
+                                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" id="dropdownMenuSplitButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <span class="sr-only">Toggle Dropdown</span>
+                                </button>  
+                                  <ul class="dropdown-menu" onclick="Vac1()">
+                                    <li><a class="dropdown-item" ><input id="1" value="AIT BAAZIZ" type="checkbox"/>&nbsp;AIT BAAZIZ</a></li>
+                                    <li><a class="dropdown-item" ><input id="2" value="ELGHAZAOUI" type="checkbox"/>&nbsp;ELGHAZAOUI</a></li>
+                                    <li><a class="dropdown-item" ><input id="3" value="BELGHARD" type="checkbox"/>&nbsp;BELGHARD</a></li>
+                                    <li><a class="dropdown-item" ><input id="4" value="AKHARTOUNE" type="checkbox"/>&nbsp;AKHARTOUNE</a></li>
+                                    <li><a class="dropdown-item" ><input id="5" value="NAMIQ" type="checkbox"/>&nbsp;NAMIQ</a></li>
+                                    <li><a class="dropdown-item" ><input id="6" value="BELAGUID" type="checkbox"/>&nbsp;BELAGUID</a></li>
+                                    <li><a class="dropdown-item" ><input id="7" value="AZEM" type="checkbox"/>&nbsp;AZEM</a></li>
+                                    <li><a class="dropdown-item" ><input id="8" value="AGUNI" type="checkbox"/>&nbsp;AGUNI</a></li>
+                                    <li><a class="dropdown-item" ><input id="9" value="OUASSOU" type="checkbox"/>&nbsp;OUASSOU</a></li>
+                                    <li><a class="dropdown-item" ><input id="10" value="EL KHOLTI" type="checkbox"/>&nbsp;EL KHOLTI</a></li>
+                                  </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-md-3 justify-content-center">
+                          <label for="exampleTextarea1">Descriptifs :</label>
+                        </div>
+                        <div class="col-md-7 justify-content-center">
+                          <div class="form-group">
+                            <textarea class="form-control " id="desc" rows="8" cols="100"></textarea>
+                          </div>
+                        </div>
+                        <!-- Vaccation 1 --------------------------------------->
+
+                        <!-- Vaccation 2 --------------------------------------->
+                        <div class="col-md-4">
+                          <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Equipe :</label>
+                            <div class="col-sm-7">
+                              <select class="form-control form-control-sm" id="equi">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                
+                                <option value="" disabled selected hidden>Equipe</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group row">
+                            <label class="col-sm-5 col-form-label">Vacation :</label>
+                            <div class="col-sm-7">
+                              <select class="form-control form-control-sm" id="vac">
+                                <option value="14H00/21H00">14H00/21H00</option>
+                                <option value="21H00/08H00">21H00/08H00</option>
+                                <option value="08H00/14H00">08H00/14H00</option>
+                                <option value="" disabled selected hidden>21H00/08H00</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-7">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-inverse-primary">ATSEP</button>
+                                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" id="dropdownMenuSplitButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <span class="sr-only">Toggle Dropdown</span>
+                                </button>  
+                                  <ul class="dropdown-menu" onclick="Vac1()">
+                                    <li><a class="dropdown-item" ><input id="1" value="AIT BAAZIZ" type="checkbox"/>&nbsp;AIT BAAZIZ</a></li>
+                                    <li><a class="dropdown-item" ><input id="2" value="ELGHAZAOUI" type="checkbox"/>&nbsp;ELGHAZAOUI</a></li>
+                                    <li><a class="dropdown-item" ><input id="3" value="BELGHARD" type="checkbox"/>&nbsp;BELGHARD</a></li>
+                                    <li><a class="dropdown-item" ><input id="4" value="AKHARTOUNE" type="checkbox"/>&nbsp;AKHARTOUNE</a></li>
+                                    <li><a class="dropdown-item" ><input id="5" value="NAMIQ" type="checkbox"/>&nbsp;NAMIQ</a></li>
+                                    <li><a class="dropdown-item" ><input id="6" value="BELAGUID" type="checkbox"/>&nbsp;BELAGUID</a></li>
+                                    <li><a class="dropdown-item" ><input id="7" value="AZEM" type="checkbox"/>&nbsp;AZEM</a></li>
+                                    <li><a class="dropdown-item" ><input id="8" value="AGUNI" type="checkbox"/>&nbsp;AGUNI</a></li>
+                                    <li><a class="dropdown-item" ><input id="9" value="OUASSOU" type="checkbox"/>&nbsp;OUASSOU</a></li>
+                                    <li><a class="dropdown-item" ><input id="10" value="EL KHOLTI" type="checkbox"/>&nbsp;EL KHOLTI</a></li>
+                                  </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3 justify-content-center">
+                          <label for="exampleTextarea1">Descriptifs :</label>
+                        </div>
+                        <div class="col-md-7 justify-content-center">
+                          <div class="form-group">
+                            <textarea class="form-control " id="desc" rows="4" cols="50"></textarea>
+                          </div>
+                        </div>
+                        <!-- Vaccation 2 --------------------------------------->
+
+                        <!-- Vaccation 3 --------------------------------------->
+                        <div class="col-md-4">
+                          <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Equipe :</label>
+                            <div class="col-sm-7">
+                              <select class="form-control form-control-sm" id="equi">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                
+                                <option value="" disabled selected hidden>Equipe</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group row">
+                            <label class="col-sm-5 col-form-label">Vacation :</label>
+                            <div class="col-sm-7">
+                              <select class="form-control form-control-sm" id="vac">
+                                <option value="14H00/21H00">14H00/21H00</option>
+                                <option value="21H00/08H00">21H00/08H00</option>
+                                <option value="08H00/14H00">08H00/14H00</option>
+                                <option value="" disabled selected hidden>21H00/08H00</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-7">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-inverse-primary">ATSEP</button>
+                                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" id="dropdownMenuSplitButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <span class="sr-only">Toggle Dropdown</span>
+                                </button>  
+                                  <ul class="dropdown-menu" onclick="Vac1()">
+                                    <li><a class="dropdown-item" ><input id="1" value="AIT BAAZIZ" type="checkbox"/>&nbsp;AIT BAAZIZ</a></li>
+                                    <li><a class="dropdown-item" ><input id="2" value="ELGHAZAOUI" type="checkbox"/>&nbsp;ELGHAZAOUI</a></li>
+                                    <li><a class="dropdown-item" ><input id="3" value="BELGHARD" type="checkbox"/>&nbsp;BELGHARD</a></li>
+                                    <li><a class="dropdown-item" ><input id="4" value="AKHARTOUNE" type="checkbox"/>&nbsp;AKHARTOUNE</a></li>
+                                    <li><a class="dropdown-item" ><input id="5" value="NAMIQ" type="checkbox"/>&nbsp;NAMIQ</a></li>
+                                    <li><a class="dropdown-item" ><input id="6" value="BELAGUID" type="checkbox"/>&nbsp;BELAGUID</a></li>
+                                    <li><a class="dropdown-item" ><input id="7" value="AZEM" type="checkbox"/>&nbsp;AZEM</a></li>
+                                    <li><a class="dropdown-item" ><input id="8" value="AGUNI" type="checkbox"/>&nbsp;AGUNI</a></li>
+                                    <li><a class="dropdown-item" ><input id="9" value="OUASSOU" type="checkbox"/>&nbsp;OUASSOU</a></li>
+                                    <li><a class="dropdown-item" ><input id="10" value="EL KHOLTI" type="checkbox"/>&nbsp;EL KHOLTI</a></li>
+                                  </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-3 justify-content-center">
+                          <label for="exampleTextarea1">Descriptifs :</label>
+                        </div>
+                        <div class="col-md-7 justify-content-center">
+                          <div class="form-group">
+                            <textarea class="form-control " id="desc" rows="4" cols="50"></textarea>
+                          </div>
+                        </div>
+
+                      </div>
+                      
+                      <div class="form-group row text-center">
+                        <div class="col-md-12 col-md-offset-12">
+                          <a>
+                            <button type="button" onclick="SaveAsPDF()" class="btn btn-primary mr-2 mt-2">Generate PDF</button>
+                          </a>
+                          <a>
+                            <button type="button" onclick="SendMail()" class="btn btn-primary mr-2 mt-2">Submit</button>
+                          </a>
+                          <a href="./registre.html">
+                            <button type="button" class="btn btn-secondary mr-2 mt-2">Cancel</button>
+                          </a>
+                        </div>
+                        
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+
+            <!-- partial:../../partials/_footer.html -->
+            <footer class="footer">
+              <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>
+              </div>
+            </footer>
+            <!-- partial -->
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+<!-- plugins:js  hiadmlqihmgvwcrz  -->
+<script src="../../vendors/js/vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- inject:js -->
+<script src="../../js/off-canvas.js"></script>
+<script src="../../js/hoverable-collapse.js"></script>
+<script src="../../js/template.js"></script>
+<script src="../../js/settings.js"></script>
+<script src="../../js/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="../../js/codeEditor.js"></script>
+<script src="../../js/tabs.js"></script>
+<script src="../../js/tooltips.js"></script>
+<script src="../../js/documentation.js"></script>
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.js"></script>
+<script src="https://unpkg.com/downloadjs@1.4.7"></script>
+
+<!-- End custom js for this page-->
+
+<script>
+  const { PDFDocument } = PDFLib;
+
+  async function SaveAsPDF() {
+    /// Variables
+    var equi, date, Vac, Desc;
+
+    equi = document.getElementById("equi").value;
+    date = document.getElementById("date").value;
+    Vac = document.getElementById("vac").value;
+    Desc = document.getElementById("desc").value;
+
+    console.log(equi, date, Vac, Desc);
+
+    // Fetch the PDF with form fields
+    const url = './RJ.pdf';
+    const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
+
+    // Load a PDF with form fields
+    const pdfDoc = await PDFDocument.load(existingPdfBytes)
+    
+    const form = pdfDoc.getForm()
+
+    // PAGE 1: Get all fields in the PDF by their names & Fill in the basic info fields
+    const dateField = form.getTextField('text_date')
+      dateField.setText(date)
+
+    const equiField = form.getTextField('text_equi')
+      equiField.setText(equi)
+
+    const descField = form.getTextField('text_desc')
+      descField.setText(Desc)
+
+
+    const pdfBytes = await pdfDoc.save()
+    //download(pdfBytes, `RJ.pdf`, "application/pdf");
+    
+
+  }
+</script>
+
+<script>
+  
+  function SendMail() {
+
+    Email.send({
+    Host: "smtp.gmail.com",
+    Username : "agadiratsep@gmail.com",
+    Password : "hiadmlqihmgvwcrz",
+    To : 'monsif.ghazaui.tab@gmail.com',
+    From : "agadiratsep@gmail.com",
+    Subject : "Rapport journalier",
+    Body : "Bonne Réception !",
+    Attachments : [
+    {
+      name : "smtpjs.png",
+      path:"https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
+    }]
+    }).then(
+      message => alert("mail sent successfully")
+    );
+    
+
+  }
+</script>
+
+<script type="text/javascript">
+  function Vac1() {
+
+    var state = {};
+    var data = {};
+
+    for (var i = 1; i < 11; i++) {
+      ssx = document.getElementById(i).checked;
+      state[i] = ssx;
+    }
+    console.log(state);
+    
+
+    for (var i = 1; i < 11; i++) {
+      if (state[i] == true) {
+        data[i] = document.getElementById(i).value;
+      }
+    }
+    console.log(data);
+       
+  }
+</script>
+
+
+</body>
+
+</html>
