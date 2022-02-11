@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>ATSEP AGA - Suivie de Maintenance</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="../../vendors/select2/select2.min.css">
+  <link rel="stylesheet" href="../../vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../../images/favicon.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="../../index.html"><img src="../../images/logo.svg" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="../../images/logo-mini.svg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:../../partials/_settings-panel.html -->
+     
+      <div id="right-sidebar" class="settings-panel">
+
+        <div class="tab-content" id="setting-content">
+
+          <div class="tab-pane fade show active scroll-wrapper" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p id="tit" class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0"></p>
+              <small id="tim" class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal"></small>
+            </div>
+ 
+            <div style="margin-left: 25px; margin-top: 50px" class="info">
+              <textarea rows="10" wrap="off" cols="25" id="all"></textarea>
+            </div>
+             
+          </div>
+
+        </div>
+
+      </div>
+
+    
+      <!-- partial -->
+
+      <!-- partial:../../partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-bas" aria-expanded="false" aria-controls="ui-bas">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">Maintenance</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-bas">
+              <ul class="nav flex-column sub-menu pl-4">
+                <li class="nav-item"> <a class="nav-link" href="../MRn.html">Radio Navigation</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../MRc.html">Radar et CIR</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#uibasi" aria-expanded="false" aria-controls="uibasi">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">Equipements</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="uibasi">
+              <ul class="nav flex-column sub-menu pl-4">
+                <li class="nav-item"> <a class="nav-link" href="">Radio Nav</a>
+                  <div class="collapse" id="uibasi">
+                  <ul class="nav flex-column sub-menu pl-4">
+                    <li class="nav-item"> <a class="nav-link" href="../pages/forms/Equi_ils.html">ILS/DME ATT</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../pages/forms/Equi_vor.html">VOR/DME ROUTE</a></li>
+                  </ul>
+                  </div>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="">Radar</a>
+                  <div class="collapse" id="uibasi">
+                  <ul class="nav flex-column sub-menu pl-4">
+                    <li class="nav-item"> <a class="nav-link" href="../pages/forms/Equi_aircon.html">AIRCON 2100</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="">ADS-B</a></li>
+                  </ul>
+                  </div>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="">TWR</a>
+                  <div class="collapse" id="uibasi">
+                  <ul class="nav flex-column sub-menu pl-4">
+                    <li class="nav-item"> <a class="nav-link" href="../index.html">VHF</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../index.html">VCS</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../index.html">ENREGISTREUR</a></li>
+                  </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/forms/registre.html">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Registre </span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/forms/Rapport_Journalier.html">
+              <i class="ti-write menu-icon"></i>
+              <span class="menu-title">Rapport Journalier</span>
+            </a>
+          </li>          
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="../documentation/documentation.html">
+              <i class="ti-info-alt menu-icon"></i>
+              <span class="menu-title">Documentation</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <!-- partial -->
+      <div class="main-panel">        
+        <div class="content-wrapper">
+          
+        <!-- content-wrapper ends -->
+
+        
+          <div class="col-md-12 grid-margin stretch-card">
+            <div class="card position-relative">
+              <div class="card-body">
+                <div class="row">
+
+                  <div class="col-12 grid-margin stretch-card">
+                    <div class="card position-relative">
+                      <div class="card-body">
+                        <div class="row">
+
+                          <div class="col-md-6">
+                            <div class="form-group row">
+                              <h4 class="card-title">Suivie de Maintenance</h4>
+                            </div>
+                          </div>
+ 
+                        </div>
+                        <!-- <p class="card-description">Filter :</p> -->
+                        <div class="row">
+                          
+
+                        <div class="table-responsive">
+                          <table class="table table-striped table-borderless" id="myTable">
+                            <thead>
+                              <tr>
+                                <th class="font-weight-bold">Entité</th>
+                                <th>Maintenance</th>
+                                <th>Date</th>
+                                <th>Périodicité</th>
+                                <!-- <th class="nav-settings">Détails</th> -->
+                                <th>Edit</th>
+                              </tr>  
+                            </thead>
+                            <tbody>
+                          
+                               
+                  
+                            </tbody>
+                          </table>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © GMAD ATSEP 2022. All rights reserved.</span>
+            
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+
+
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../vendors/typeahead.js/typeahead.bundle.min.js"></script>
+  <script src="../../vendors/select2/select2.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script src="../../js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/file-upload.js"></script>
+  <script src="../../js/typeahead.js"></script>
+  <script src="../../js/select2.js"></script>
+  <!-- End custom js for this page-->
+  <script type="text/javascript" src="script.js"></script>
+
+  <script>
+    function R() {
+
+      var checkBox1 = document.getElementById("myRc");
+      var checkBox2 = document.getElementById("myRn");
+      //console.log("0 "+ checkBox1.checked+checkBox2.checked);
+
+      // if (checkBox1.checked == true && checkBox2.checked == true){
+      //   console.log("1 "+checkBox1.checked+checkBox2.checked);
+      //   input = "RNC";
+      //   Filter(input, 0);
+      // }
+      if (checkBox1.checked == true && checkBox2.checked == false) {
+        input = "RC";
+        Filter(input, 0);
+      }else if (checkBox1.checked == false && checkBox2.checked == true) {
+        input = "RN";
+        Filter(input, 0); 
+      }else {
+        console.log("ELSE "+checkBox1.checked+checkBox2.checked);
+        input = "";
+        Filter(input, 0);
+      }
+    }
+  </script>
+
+  <script>
+    function myFunction() {
+      var input, filter;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      //const liste = ['ILS', 'DME ATT', 'VOR', 'DME R', 'NDB' ,'VHF' ,'VCS' ,'D-ATIS' ,'ENREGISTREUR', 'ADS-B', 'AIRCON'];
+      
+      Filter(filter, 1);
+    }
+  </script>
+
+  <script type="text/javascript">
+    function Filter(input, y) {
+      var table, tr, td, i, txtValue;
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[y];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(input) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }       
+        }
+    }
+  </script>
+
+  <script type="text/javascript">
+
+    fetch('http://localhost:3002/registree', {
+            method: 'get',
+            headers: {'Content-Type': 'application/json'}
+        })
+    .then(response => response.json())
+    .then(users => {
+          console.log(users);
+          
+          console.log(users.length);
+          for(var a = 0; a < users.length; a++) {
+            var Id = users[a].id;
+            var Ent = users[a].entite;
+            var equi = users[a].equipement;
+            var date = users[a].Date;
+            var pan = users[a].panne;
+            var rem = users[a].remarque;
+
+            var table = document.getElementById('myTable');
+            var row = table.insertRow(a+1);
+            
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = Ent;
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML = equi;
+            var cell3 = row.insertCell(2);
+            cell3.innerHTML = date;
+            var cell4 = row.insertCell(3);
+            cell4.innerHTML = pan;
+            // var cell5 = row.insertCell(4);
+            // cell5.innerHTML = "<i class='ti-more'></i>";
+            var cell6 = row.insertCell(4);
+            cell6.innerHTML ="<i id='"+Id+"' onclick='edit("+Id+")' class='ti-pencil-alt'></i>";
+            var txt = document.getElementById('all');
+            txt.innerHTML = rem;
+            var tit = document.getElementById('tit');
+            tit.innerHTML = pan;
+            var tim = document.getElementById('tim');
+            tim.innerHTML = date;
+
+          }
+          R();
+
+        })
+
+  </script>
+  <script type="text/javascript">
+    function edit(x) {
+      var input;
+      console.log("Voila : ",x);
+      parent.location="Change_form.html?id="+x+"";
+      
+      
+    }
+  </script>
+</body>
+
+</html>
