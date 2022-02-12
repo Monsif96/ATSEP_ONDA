@@ -22923,27 +22923,27 @@ select.border-dark.tt-hint:focus, .select2-container--default .select2-selection
 .square-box-loader-corner-top:before {
   border-left: 1px solid;
   border-top: 1px solid;
-  top: -4px;
-  left: -4px;
+  top: -10px;
+  left: -10px;
 }
 .square-box-loader-corner-top:after {
   border-right: 1px solid;
   border-top: 1px solid;
-  top: -4px;
-  right: -4px;
+  top: -10px;
+  right: -10px;
 }
 
 .square-box-loader-corner-bottom:before {
   border-left: 1px solid;
   border-bottom: 1px solid;
-  bottom: -4px;
-  left: -4px;
+  bottom: -10px;
+  left: -10px;
 }
 .square-box-loader-corner-bottom:after {
   border-right: 1px solid;
   border-bottom: 1px solid;
-  bottom: -4px;
-  right: -4px;
+  bottom: -10px;
+  right: -10px;
 }
 
 /* Circle loader */
