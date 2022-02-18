@@ -1,6 +1,6 @@
 {
-  "name": "SkyDash_admin",
-  "version": "1.2.1",
+  "name": "ATSEP AGA Project",
+  "version": "1.0.0",
   "description": "",
   "main": "index.html",
   "dependencies": {
@@ -71,6 +71,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "gulp default",
+    "build": "gulp",
     "start": "node_modules/.bin/gulp watch"
   },
   "author": "bootstrapdash",
